@@ -12,7 +12,7 @@ app = FastAPI()
 origins = [
     "http://localhost:5173",  
     "http://localhost:5174",  
-    "https://lib-frontend-ehrc.onrender.com",
+    "https://school-management-client.onrender.com",
 ]
 
 app.add_middleware(
