@@ -142,3 +142,8 @@ def get_student_attendances(teacher_id: str, db: Session = Depends(get_db)):
         if attandance:
             number_attendance_today += 1
     return number_attendance_today
+
+@app.get("/students/get_number")
+def get_total_number_of_students(db: Session = Depends(get_db)):
+    students = db.query(StudentStructure).all()
+    return len(students)
